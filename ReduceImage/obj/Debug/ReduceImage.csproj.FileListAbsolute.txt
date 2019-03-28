@@ -1,0 +1,10 @@
+C:\Users\Tolunay\source\repos\ReduceImage\ReduceImage\obj\Debug\ReduceImage.csprojAssemblyReference.cache
+C:\Users\Tolunay\source\repos\ReduceImage\ReduceImage\obj\Debug\ReduceImage.Form1.resources
+C:\Users\Tolunay\source\repos\ReduceImage\ReduceImage\obj\Debug\ReduceImage.Properties.Resources.resources
+C:\Users\Tolunay\source\repos\ReduceImage\ReduceImage\obj\Debug\ReduceImage.csproj.GenerateResource.cache
+C:\Users\Tolunay\source\repos\ReduceImage\ReduceImage\obj\Debug\ReduceImage.csproj.CoreCompileInputs.cache
+C:\Users\Tolunay\source\repos\ReduceImage\ReduceImage\bin\Debug\ReduceImage.exe.config
+C:\Users\Tolunay\source\repos\ReduceImage\ReduceImage\bin\Debug\ReduceImage.exe
+C:\Users\Tolunay\source\repos\ReduceImage\ReduceImage\bin\Debug\ReduceImage.pdb
+C:\Users\Tolunay\source\repos\ReduceImage\ReduceImage\obj\Debug\ReduceImage.exe
+C:\Users\Tolunay\source\repos\ReduceImage\ReduceImage\obj\Debug\ReduceImage.pdb
