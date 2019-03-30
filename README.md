@@ -9,4 +9,4 @@ Different Image Formats
 *.gif
 *.bmp
 ---------------------------
-Up to 85% percent file size reduction.
+Up to 85% file size reduction.
