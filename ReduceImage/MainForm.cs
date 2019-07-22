@@ -22,6 +22,9 @@ namespace ReduceImage
         #region Variables
         public string[] filePaths;
         public string tempPath;
+        public long beforeFileSize;
+        public long afterFileSize;
+
         #endregion
 
         private void BtnStart_Click(object sender, EventArgs e)
@@ -59,7 +62,9 @@ namespace ReduceImage
                     target.Save(tempPath, jpgEncoder, myEncoderParameters);
                 }
 
-                MessageBox.Show("Completed. Total Reduced Image "+this.Text, "Image Size Reducer");
+                afterFileSize=FolderSizeCalculation(SelectFolderDialog.SelectedPath);       
+
+                MessageBox.Show("Completed. Total Reduced Image Size : "+(beforeFileSize-afterFileSize).ToString()+" Byte", "Image Size Reducer");
 
                 this.Text = "Image Size Reducer";
             }
@@ -80,6 +85,7 @@ namespace ReduceImage
             DialogResult result = SelectFolderDialog.ShowDialog();
             if (result == DialogResult.OK)
             {
+                beforeFileSize=FolderSizeCalculation(SelectFolderDialog.SelectedPath);
                 filePaths = Directory.GetFiles(SelectFolderDialog.SelectedPath, FileType, SearchOption.TopDirectoryOnly);
             }
         }
@@ -95,6 +101,18 @@ namespace ReduceImage
                 }
             }
             return null;
+        }
+
+        public static long FolderSizeCalculation(string yol)
+        {
+            long size = 0;
+            string[] folders = Directory.GetFiles(yol, "*.*", SearchOption.AllDirectories);
+            foreach (string folder in folders)
+            {
+                FileInfo fileInfo = new FileInfo(folder);
+                size += fileInfo.Length;
+            }
+              return size;
         }
 
     }

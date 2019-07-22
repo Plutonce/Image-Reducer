@@ -18,3 +18,13 @@ C:\Users\user\Desktop\tolu\Image-Reducer-master\ReduceImage\obj\Debug\ReduceImag
 C:\Users\user\Desktop\tolu\Image-Reducer-master\ReduceImage\obj\Debug\ReduceImage.exe
 C:\Users\user\Desktop\tolu\Image-Reducer-master\ReduceImage\obj\Debug\ReduceImage.pdb
 C:\Users\user\Desktop\tolu\Image-Reducer-master\ReduceImage\obj\Debug\ReduceImage.MainForm.resources
+C:\Users\Tolunay\Source\Repos\Plutonce\Image-Reducer\ReduceImage\bin\Debug\ReduceImage.exe.config
+C:\Users\Tolunay\Source\Repos\Plutonce\Image-Reducer\ReduceImage\bin\Debug\ReduceImage.exe
+C:\Users\Tolunay\Source\Repos\Plutonce\Image-Reducer\ReduceImage\bin\Debug\ReduceImage.pdb
+C:\Users\Tolunay\Source\Repos\Plutonce\Image-Reducer\ReduceImage\obj\Debug\ReduceImage.csprojAssemblyReference.cache
+C:\Users\Tolunay\Source\Repos\Plutonce\Image-Reducer\ReduceImage\obj\Debug\ReduceImage.MainForm.resources
+C:\Users\Tolunay\Source\Repos\Plutonce\Image-Reducer\ReduceImage\obj\Debug\ReduceImage.Properties.Resources.resources
+C:\Users\Tolunay\Source\Repos\Plutonce\Image-Reducer\ReduceImage\obj\Debug\ReduceImage.csproj.GenerateResource.cache
+C:\Users\Tolunay\Source\Repos\Plutonce\Image-Reducer\ReduceImage\obj\Debug\ReduceImage.csproj.CoreCompileInputs.cache
+C:\Users\Tolunay\Source\Repos\Plutonce\Image-Reducer\ReduceImage\obj\Debug\ReduceImage.exe
+C:\Users\Tolunay\Source\Repos\Plutonce\Image-Reducer\ReduceImage\obj\Debug\ReduceImage.pdb
