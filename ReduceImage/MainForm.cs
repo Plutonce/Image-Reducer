@@ -40,10 +40,9 @@ namespace ReduceImage
             try
             {
                 GetFilePathsInFolder(CBxIFormat.Text);
-
-                if (filePaths.Length == 0)
-                    this.Text = "Count: " + filePaths.Length.ToString();
-
+                    if (filePaths.Length == 0 && filePaths != null) 
+                        this.Text = "Count: " + filePaths.Length.ToString();
+                    
                 for (int i = 0; i < filePaths.Length; i++)
                 {
                     GetImageCount();
@@ -55,22 +54,22 @@ namespace ReduceImage
                     ImageCodecInfo jpgEncoder = GetEncoder(ImageFormat.Jpeg);
                     System.Drawing.Imaging.Encoder myEncoder = System.Drawing.Imaging.Encoder.Quality;
                     EncoderParameters myEncoderParameters = new EncoderParameters(1);
-                    EncoderParameter myEncoderParameter = new EncoderParameter(myEncoder, 50L);
+                    EncoderParameter myEncoderParameter = new EncoderParameter(myEncoder,trackBar1.Value<5?25L:50L);
                     myEncoderParameters.Param[0] = myEncoderParameter;
                     src.Dispose();
                     File.Delete(tempPath);
                     target.Save(tempPath, jpgEncoder, myEncoderParameters);
+                    logWriter(filePaths[i].ToString() + " Decrased. | "+ i.ToString() + Environment.NewLine, textBox1);
                 }
 
-                afterFileSize=FolderSizeCalculation(SelectFolderDialog.SelectedPath);       
-
+                afterFileSize=FolderSizeCalculation(SelectFolderDialog.SelectedPath);
                 MessageBox.Show("Completed. Total Reduced Image Size : "+(beforeFileSize-afterFileSize).ToString()+" Byte", "Image Size Reducer");
 
                 this.Text = "Image Size Reducer";
             }
             catch (Exception Ex)
             {
-                MessageBox.Show("Failed. Error Exception: " + Ex.ToString(), "Image Size Reducer");
+                MessageBox.Show("Failed.", "Image Size Reducer");
             }
         }
 
@@ -85,8 +84,12 @@ namespace ReduceImage
             DialogResult result = SelectFolderDialog.ShowDialog();
             if (result == DialogResult.OK)
             {
-                beforeFileSize=FolderSizeCalculation(SelectFolderDialog.SelectedPath);
-                filePaths = Directory.GetFiles(SelectFolderDialog.SelectedPath, FileType, SearchOption.TopDirectoryOnly);
+                    beforeFileSize = FolderSizeCalculation(SelectFolderDialog.SelectedPath);
+                    filePaths = Directory.GetFiles(SelectFolderDialog.SelectedPath, FileType, SearchOption.AllDirectories);
+            }
+            else if(result == DialogResult.Cancel)
+            {
+                    
             }
         }
 
@@ -114,6 +117,19 @@ namespace ReduceImage
             }
               return size;
         }
-
+        public void logWriter(string txt, TextBox log)
+        {
+            //Log yazdırma."log" isimli textBox gerektirir.
+            //Ex:logWriter("Hello World")
+            if (log.Text.Length > 5000)
+                log.Text = String.Empty;
+            log.Text += DateTime.Now.ToString("dd MMM") + " - " + DateTime.Now.ToString("HH:mm:ss") + "  --  " + txt + Environment.NewLine;
+            log.SelectionStart = log.TextLength;
+            log.ScrollToCaret();
+        }
+        static double ConvertBytesToMegabytes(long bytes)
+        {
+            return (bytes / 1024f) / 1024f;
+        }
     }
 }

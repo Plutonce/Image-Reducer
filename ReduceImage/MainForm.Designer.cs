@@ -32,11 +32,15 @@
             this.SelectFolderDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.LblFormat = new System.Windows.Forms.Label();
             this.CBxIFormat = new System.Windows.Forms.ComboBox();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnStart
             // 
-            this.BtnStart.Location = new System.Drawing.Point(93, 52);
+            this.BtnStart.Location = new System.Drawing.Point(51, 121);
             this.BtnStart.Name = "BtnStart";
             this.BtnStart.Size = new System.Drawing.Size(121, 48);
             this.BtnStart.TabIndex = 0;
@@ -47,7 +51,7 @@
             // LblFormat
             // 
             this.LblFormat.AutoSize = true;
-            this.LblFormat.Location = new System.Drawing.Point(118, 9);
+            this.LblFormat.Location = new System.Drawing.Point(76, 9);
             this.LblFormat.Name = "LblFormat";
             this.LblFormat.Size = new System.Drawing.Size(71, 13);
             this.LblFormat.TabIndex = 2;
@@ -64,21 +68,50 @@
             "*.svg",
             "*.gif",
             "*.bmp"});
-            this.CBxIFormat.Location = new System.Drawing.Point(93, 25);
+            this.CBxIFormat.Location = new System.Drawing.Point(51, 25);
             this.CBxIFormat.Name = "CBxIFormat";
             this.CBxIFormat.Size = new System.Drawing.Size(121, 21);
             this.CBxIFormat.TabIndex = 3;
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(51, 70);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(121, 45);
+            this.trackBar1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(76, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Quality Degree";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(237, 25);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(337, 144);
+            this.textBox1.TabIndex = 6;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(318, 114);
+            this.ClientSize = new System.Drawing.Size(586, 181);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.CBxIFormat);
             this.Controls.Add(this.LblFormat);
             this.Controls.Add(this.BtnStart);
             this.Name = "MainForm";
             this.Text = "Image Size Reducer";
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -90,6 +123,9 @@
         private System.Windows.Forms.FolderBrowserDialog SelectFolderDialog;
         private System.Windows.Forms.Label LblFormat;
         private System.Windows.Forms.ComboBox CBxIFormat;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
